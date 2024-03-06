@@ -17,6 +17,11 @@ public class MainActivity2 extends AppCompatActivity {
         Intent thisIntent= getIntent();
 
              String Str=  thisIntent.getExtras().getString("Hamsi");
+             DataHolder mdh= (DataHolder) thisIntent.getExtras().getSerializable("MyData");
+             Str+="\n"+mdh.getAd();
+             Str+="\n"+mdh.getSoyad();
+             Str+="\n"+mdh.getEmail();
+
             tv.setText(Str);
     }
 }
